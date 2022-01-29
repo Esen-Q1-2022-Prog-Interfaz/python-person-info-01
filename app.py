@@ -1,3 +1,6 @@
+from db import createNewPersonCard
+
+
 def showMenu():
     print()
     print()
@@ -21,7 +24,11 @@ while True:
         """exit app"""
         break
     elif option == 0:
-        pass
+        """create a new person card"""
+        name = input("name: ")
+        age = int(input("age: "))
+        salary = int(input("salary: "))
+        createNewPersonCard(name, age, salary)
     elif option == 1:
         pass
     elif option == 2:
