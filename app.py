@@ -39,8 +39,14 @@ while True:
     elif option == 2:
         """show all person cards"""
         personCardList = getAllPersonCards()
-        for card in personCardList:
-            print(card)
+        cardCounter = len(personCardList)
+        print(f"{cardCounter} person cards")
+        print()
+        if cardCounter:
+            for card in personCardList:
+                print(card)
+        else:
+            print("there are no person cards")
     elif option == 3:
         """update person card"""
         id = int(input("id of card to update: "))
